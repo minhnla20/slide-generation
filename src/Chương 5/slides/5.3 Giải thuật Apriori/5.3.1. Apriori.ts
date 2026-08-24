@@ -20,6 +20,86 @@ slide58Section.addText(
 );
 
 // ----------------------------------------------------
+// Slide 58b — CONTENT (Tính chất Apriori & Nguyên lý Đơn điệu âm)
+// ----------------------------------------------------
+const slide58bContent = pptx.addSlide({ masterName: "CONTENT" });
+slide58bContent.addText("CHƯƠNG 5 – LUẬT KẾT HỢP", { placeholder: "footer" });
+slide58bContent.addText("TÍNH CHẤT APRIORI & NGUYÊN LÝ ĐƠN ĐIỆU ÂM", { placeholder: "title" });
+
+addText(
+  slide58bContent,
+  [
+    { text: "🌲 Bùng nổ Không gian Tìm kiếm:\n\n", options: { bold: true, fontSize: 13 } },
+    { text: "• Với m sản phẩm, tổng số tập mục phi rỗng có thể sinh ra là:\n" },
+    { text: "  N_itemsets = 2ᵐ - 1\n\n", options: { bold: true } },
+    { text: "• Ví dụ: m = 100 sản phẩm ➔ 2¹⁰⁰ - 1 ≈ 1.26 × 10³⁰ tập mục! Không thể kiểm tra duyệt kiệt.\n\n" },
+    { text: "• Giải pháp tỉa bớt: ", options: { bold: true } },
+    { text: "Sử dụng Tính chất Apriori (Apriori Property)." }
+  ],
+  {
+    x: cmToInch(0.8),
+    y: cmToInch(2.0),
+    w: cmToInch(11.5),
+    h: cmToInch(7.2),
+    fontSize: 11,
+    lineSpacing: 15,
+    color: DUE_COLORS.darkText,
+    fill: { color: DUE_COLORS.lightGreen },
+    shape: "roundRect",
+    margin: 12,
+    rectRadius: 0.1,
+    valign: "top",
+  }
+);
+
+addText(
+  slide58bContent,
+  [
+    { text: "✂️ Nguyên lý Đơn điệu âm (Anti-monotonicity):\n\n", options: { bold: true, fontSize: 13 } },
+    { text: "• Định lý Support:\n", options: { bold: true } },
+    { text: "  ∀ S ⊆ T  ⟹  Support(S) ≥ Support(T)\n\n" },
+    { text: "• Tính chất 1 (Tập con thường xuyên):\n" },
+    { text: "  T thường xuyên  ⟹  Mọi tập con S ⊆ T đều thường xuyên.\n\n" },
+    { text: "• Tính chất 2 (Cắt tỉa tập cha - Pruning Rule):\n" },
+    { text: "  S không thường xuyên (Support(S) < minsup)  ⟹  Mọi tập cha T ⊇ S đều KHÔNG THƯỜNG XUYÊN!" }
+  ],
+  {
+    x: cmToInch(13.1),
+    y: cmToInch(2.0),
+    w: cmToInch(11.5),
+    h: cmToInch(7.2),
+    fontSize: 11,
+    lineSpacing: 15,
+    color: DUE_COLORS.white,
+    fill: { color: DUE_COLORS.blue },
+    shape: "roundRect",
+    margin: 12,
+    rectRadius: 0.1,
+    valign: "top",
+  }
+);
+
+addText(
+  slide58bContent,
+  "💡 Ý nghĩa cốt lõi: Hễ phát hiện 1 tập mục S không đạt minsup, thuật toán loại bỏ ngay lập tức toàn bộ các tập cha chứa S mà không cần kiểm tra CSDL!",
+  {
+    x: cmToInch(0.8),
+    y: cmToInch(9.8),
+    w: cmToInch(23.8),
+    h: cmToInch(1.9),
+    fontSize: 13.5,
+    lineSpacing: 18,
+    color: DUE_COLORS.white,
+    fill: { color: DUE_COLORS.green },
+    bold: true,
+    shape: "roundRect",
+    margin: 12,
+    rectRadius: 0.1,
+    valign: "middle",
+  }
+);
+
+// ----------------------------------------------------
 // Slide 59 — CONTENT (Bài toán minh họa từng bước)
 // ----------------------------------------------------
 const slide59Content = pptx.addSlide({ masterName: "CONTENT" });

@@ -14,14 +14,14 @@ slide31Content.addText("THƯỚC ĐO 3 — LIFT (ĐỘ NÂNG)", { placeholder: "
 addText(
   slide31Content,
   [
-    { text: "🚀 Khái niệm & Vấn đề giải quyết:\n\n", options: { bold: true, fontSize: 12.5 } },
+    { text: "🚀 Khái niệm & Vấn đề giải quyết:\n\n", options: { bold: true, fontSize: 13 } },
     { text: "• Vấn đề: ", options: { bold: true } },
-    { text: "Confidence cao có thể chỉ vì vế phải Y vốn đã xuất hiện rất phổ biến (Support nền cao).\n\n" },
+    { text: "Confidence cao có thể chỉ vì vế phải Y vốn đã xuất hiện rất phổ biến (Support nền của Y cao).\n\n" },
     { text: "• Giải pháp: ", options: { bold: true } },
-    { text: "Lift đo mức độ X làm tăng/giảm khả năng xuất hiện Y so với mức nền.\n\n" },
-    { text: "• Công thức:\n", options: { bold: true } },
-    { text: "  lift(X → Y) = confidence(X → Y) / support(Y)\n" },
-    { text: "  lift(X → Y) = support(X ∪ Y) / [support(X) × support(Y)]" }
+    { text: "Lift đo mức độ X làm tăng/giảm khả năng xuất hiện Y so với mức nền ngẫu nhiên.\n\n" },
+    { text: "• Các dạng công thức tính Lift:\n", options: { bold: true } },
+    { text: "  1) Lift(X → Y) = Confidence(X → Y) / Support(Y)\n" },
+    { text: "  2) Lift(X → Y) = Support(X ∪ Y) / [Support(X) × Support(Y)]" }
   ],
   {
     x: cmToInch(0.8),
@@ -33,7 +33,7 @@ addText(
     color: DUE_COLORS.darkText,
     fill: { color: DUE_COLORS.lightGreen },
     shape: "roundRect",
-    margin: 10,
+    margin: 12,
     rectRadius: 0.1,
     valign: "top",
   }
@@ -42,11 +42,13 @@ addText(
 addText(
   slide31Content,
   [
-    { text: "💡 Trực giác công thức Lift:\n\n", options: { bold: true, fontSize: 12.5 } },
-    { text: "       Xác suất xuất hiện Y khi ĐÃ CÓ X\n" },
-    { text: "Lift = ────────────────────────────────────\n" },
-    { text: "       Xác suất xuất hiện Y trong TOÀN BỘ CSDL\n\n" },
-    { text: "• Trả lời câu hỏi: Khi biết X xuất hiện, khả năng mua Y cao hơn, bằng hay thấp hơn mức thông thường?" }
+    { text: "💡 Trực giác công thức Lift:\n\n", options: { bold: true, fontSize: 13 } },
+    { text: "  Lift(X → Y) = P(Y | X) / P(Y)\n\n", options: { bold: true } },
+    { text: "• Tử số P(Y | X): ", options: { bold: true } },
+    { text: "Xác suất xuất hiện Y khi ĐÃ CÓ X.\n\n" },
+    { text: "• Mẫu số P(Y): ", options: { bold: true } },
+    { text: "Xác suất xuất hiện Y trong TOÀN BỘ CSDL.\n\n" },
+    { text: "• Trả lời: Khi biết X xuất hiện, khả năng mua Y cao hơn (>1), bằng (=1) hay thấp hơn (<1) mức thông thường?" }
   ],
   {
     x: cmToInch(13.1),
@@ -58,7 +60,7 @@ addText(
     color: DUE_COLORS.white,
     fill: { color: DUE_COLORS.blue },
     shape: "roundRect",
-    margin: 10,
+    margin: 12,
     rectRadius: 0.1,
     valign: "top",
   }

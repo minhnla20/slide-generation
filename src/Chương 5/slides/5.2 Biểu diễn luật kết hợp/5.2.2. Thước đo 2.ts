@@ -14,12 +14,13 @@ slide27Content.addText("THƯỚC ĐO 2 — CONFIDENCE (ĐỘ TIN CẬY)", { plac
 addText(
   slide27Content,
   [
-    { text: "📐 Định nghĩa Confidence:\n\n", options: { bold: true, fontSize: 12.5 } },
-    { text: "• Confidence đo tỷ lệ giao dịch chứa X cũng đồng thời chứa Y.\n\n" },
-    { text: "• Công thức:\n", options: { bold: true } },
-    { text: "  confidence(X → Y) = support(X ∪ Y) / support(X) = count(X ∪ Y) / count(X)\n\n" },
-    { text: "• Ý nghĩa xác suất có điều kiện:\n", options: { bold: true } },
-    { text: "  confidence(X → Y) = P(Y | X)" }
+    { text: "📐 Định nghĩa Confidence (Độ tin cậy):\n\n", options: { bold: true, fontSize: 13 } },
+    { text: "• Confidence đo tỷ lệ các giao dịch chứa vế trái X mà cũng chứa vế phải Y.\n\n" },
+    { text: "• Công thức tính:\n", options: { bold: true } },
+    { text: "  Confidence(X → Y) = Support(X ∪ Y) / Support(X)\n" },
+    { text: "                    = count(X ∪ Y) / count(X)\n\n" },
+    { text: "• Bản chất xác suất có điều kiện:\n", options: { bold: true } },
+    { text: "  Confidence(X → Y) = P(Y | X)" }
   ],
   {
     x: cmToInch(0.8),
@@ -31,7 +32,7 @@ addText(
     color: DUE_COLORS.darkText,
     fill: { color: DUE_COLORS.lightGreen },
     shape: "roundRect",
-    margin: 10,
+    margin: 12,
     rectRadius: 0.1,
     valign: "top",
   }

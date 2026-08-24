@@ -9,9 +9,9 @@ const pptx = SlideGenerator.pptx;
 // ----------------------------------------------------
 const slide142Section = pptx.addSlide({ masterName: "SECTION" });
 slide142Section.addText("CHƯƠNG 5 – LUẬT KẾT HỢP", { placeholder: "footer" });
-slide142Section.addText("BÀI TẬP CUỐI CHƯƠNG — CHUẨN BỊ DỮ LIỆU GIAO DỊCH", { placeholder: "title" });
+slide142Section.addText("BÀI TẬP CUỐI CHƯƠNG — CHUẨN BỊ DỮ LIỆU", { placeholder: "title" });
 slide142Section.addText(
-  "Tải bộ dữ liệu thực tế Credit Card Transactions Dataset trên Kaggle (priyamchoksi/credit-card-transactions-dataset)",
+  "Tải bộ dữ liệu thực tế Credit Card Transactions Dataset trên Kaggle\n(priyamchoksi/credit-card-transactions-dataset)",
   { placeholder: "content" }
 );
 slide142Section.addText(

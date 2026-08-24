@@ -104,11 +104,11 @@ addText(
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_5_evaluate_rules.ipynb\n\n", options: { bold: true, color: "FFD700" } },
     { text: "⚙️ Phân chia theo Mốc Thời gian:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Tập Train: `transaction_date <= '2025-10-31'` (T1-T10)\n\n" },
-    { text: "• Tập Test: `transaction_date > '2025-10-31'` (T11-T12)\n\n" },
+    { text: "• Tập Train: transaction_date <= '2025-10-31' (T1-T10)\n\n" },
+    { text: "• Tập Test: transaction_date > '2025-10-31' (T11-T12)\n\n" },
     { text: "• Mã hóa One-hot độc lập:\n" },
-    { text: "  - `train_basket = create_onehot(train_df)`\n" },
-    { text: "  - `test_basket  = create_onehot(test_df)`\n\n" },
+    { text: "  - train_basket = create_onehot(train_df)\n" },
+    { text: "  - test_basket  = create_onehot(test_df)\n\n" },
     { text: "🎯 Tập Test hoàn toàn độc lập với phát hiện luật!" }
   ],
   {
@@ -161,11 +161,11 @@ addText(
     { text: "demo_5_5_evaluate_rules.ipynb\n\n", options: { bold: true, color: DUE_COLORS.green } },
     { text: "⚙️ Quy trình Đánh giá Ngoài mẫu:\n\n", options: { bold: true, fontSize: 12 } },
     { text: "1. Khai phá & lọc luật trên Train:\n" },
-    { text: "   `fpgrowth()` + `association_rules(min_threshold=0.50)`\n\n" },
+    { text: "   fpgrowth() + association_rules(min_threshold=0.50)\n\n" },
     { text: "2. Tính lại các chỉ số trên Test:\n" },
-    { text: "   • `calc_support(test_basket, antecedent, consequent)`\n" },
-    { text: "   • `calc_confidence(test_basket, antecedent, consequent)`\n" },
-    { text: "   • `calc_lift(test_basket, antecedent, consequent)`" }
+    { text: "   • calc_support(test_basket, antecedent, consequent)\n" },
+    { text: "   • calc_confidence(test_basket, antecedent, consequent)\n" },
+    { text: "   • calc_lift(test_basket, antecedent, consequent)" }
   ],
   {
     x: cmToInch(0.8),

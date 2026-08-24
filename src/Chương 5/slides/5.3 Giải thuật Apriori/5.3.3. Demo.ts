@@ -42,11 +42,11 @@ addText(
   slide70Content,
   [
     { text: "🔄 6 Bước Quy trình Code Python:\n\n", options: { bold: true, fontSize: 13 } },
-    { text: "1. Đọc file `transactions.csv` bằng pandas.\n\n" },
+    { text: "1. Đọc file transactions.csv bằng pandas.\n\n" },
     { text: "2. Gom sản phẩm theo transaction_id thành danh sách giỏ hàng.\n\n" },
     { text: "3. One-hot encoding thành ma trận 0/1 (TransactionEncoder).\n\n" },
-    { text: "4. Chạy `apriori()` ➔ Trích xuất Frequent Itemsets.\n\n" },
-    { text: "5. Chạy `association_rules()` ➔ Sinh Luật kết hợp.\n\n" },
+    { text: "4. Chạy apriori() ➔ Trích xuất Frequent Itemsets.\n\n" },
+    { text: "5. Chạy association_rules() ➔ Sinh Luật kết hợp.\n\n" },
     { text: "6. Lọc luật theo minconf & lift > 1." }
   ],
   {
@@ -121,9 +121,9 @@ addText(
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_3_apriori.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
     { text: "⚙️ Thao tác gom nhóm:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Đọc file `transactions.csv` bằng `pandas`.\n\n" },
-    { text: "• Gom sản phẩm theo `transaction_id`:\n" },
-    { text: "  `df.groupby('transaction_id')['product'].apply(list)`\n\n" },
+    { text: "• Đọc file transactions.csv bằng pandas.\n\n" },
+    { text: "• Gom sản phẩm theo transaction_id:\n" },
+    { text: "  df.groupby('transaction_id')['product'].apply(list)\n\n" },
     { text: "🎯 Đầu ra: ", options: { bold: true } },
     { text: "Danh sách giỏ hàng (List of lists)\n" },
     { text: "  ➔ [['Sữa', 'Bánh mì', 'Trứng'], ['Sữa', 'Cà phê']]" }
@@ -178,11 +178,11 @@ addText(
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_3_apriori.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
     { text: "⚙️ Thao tác Mã hóa Nhị phân:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Thư viện: `mlxtend.preprocessing.TransactionEncoder`\n\n" },
+    { text: "• Thư viện: mlxtend.preprocessing.TransactionEncoder\n\n" },
     { text: "• Cú pháp chính:\n" },
-    { text: "  `te = TransactionEncoder()`\n" },
-    { text: "  `encoded = te.fit(transactions).transform(transactions)`\n" },
-    { text: "  `basket = pd.DataFrame(encoded, columns=te.columns_)`\n\n" },
+    { text: "  te = TransactionEncoder()\n" },
+    { text: "  encoded = te.fit(transactions).transform(transactions)\n" },
+    { text: "  basket = pd.DataFrame(encoded, columns=te.columns_)\n\n" },
     { text: "🎯 Đầu ra: ", options: { bold: true } },
     { text: "Ma trận One-hot 0/1 (Boolean)" }
   ],
@@ -258,13 +258,13 @@ addText(
   [
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_3_apriori.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
-    { text: "⚙️ Gọi hàm `apriori()`:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Hàm chính: `mlxtend.frequent_patterns.apriori()`\n\n" },
+    { text: "⚙️ Gọi hàm apriori():\n\n", options: { bold: true, fontSize: 12 } },
+    { text: "• Hàm chính: mlxtend.frequent_patterns.apriori()\n\n" },
     { text: "• Tham số quan trọng:\n" },
-    { text: "  - `basket`: Ma trận giỏ hàng One-hot 0/1\n" },
-    { text: "  - `min_support = 0.10`: Ngưỡng support tối thiểu 10%\n" },
-    { text: "  - `use_colnames = True`: Giữ tên sản phẩm trực quan\n\n" },
-    { text: "🎯 Sắp xếp: `sort_values(by='support', ascending=False)`" }
+    { text: "  - basket: Ma trận giỏ hàng One-hot 0/1\n" },
+    { text: "  - min_support = 0.10: Ngưỡng support tối thiểu 10%\n" },
+    { text: "  - use_colnames = True: Giữ tên sản phẩm trực quan\n\n" },
+    { text: "🎯 Sắp xếp: sort_values(by='support', ascending=False)" }
   ],
   {
     x: cmToInch(0.8),
@@ -306,7 +306,7 @@ slide73Content.addTable(
 
 addText(
   slide73Content,
-  "💡 Diễn giải: `support = 0.14` nghĩa là tổ hợp {Sữa, Bánh mì} xuất hiện cùng nhau trong 14% tổng số hóa đơn.",
+  "💡 Diễn giải: support = 0.14 nghĩa là tổ hợp {Sữa, Bánh mì} xuất hiện cùng nhau trong 14% tổng số hóa đơn.",
   {
     x: cmToInch(0.8),
     y: cmToInch(9.8),
@@ -336,10 +336,10 @@ addText(
   [
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_3_apriori.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
-    { text: "⚙️ Sinh & Lọc Luật (`association_rules`):\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Hàm: `association_rules(frequent_itemsets, metric='confidence', min_threshold=0.70)`\n\n" },
+    { text: "⚙️ Sinh & Lọc Luật (association_rules):\n\n", options: { bold: true, fontSize: 12 } },
+    { text: "• Hàm: association_rules(frequent_itemsets, metric='confidence', min_threshold=0.70)\n\n" },
     { text: "• Lọc kép điều kiện:\n" },
-    { text: "  - Confidence $\\ge$ 70%\n" },
+    { text: "  - Confidence ≥ 70%\n" },
     { text: "  - Lift > 1.0 (Loại liên kết âm & độc lập)\n\n" },
     { text: "🎯 Đầu ra: DataFrame chứa antecedents, consequents, support, confidence, lift." }
   ],
@@ -383,7 +383,7 @@ slide74Content.addTable(
 
 addText(
   slide74Content,
-  "💡 Quy tắc thực hành: Luôn kết hợp lọc đồng thời `confidence >= minconf` và `lift > 1` để loại các luật độc lập/liên kết âm.",
+  "💡 Quy tắc thực hành: Luôn kết hợp lọc đồng thời confidence >= minconf và lift > 1 để loại các luật độc lập/liên kết âm.",
   {
     x: cmToInch(0.8),
     y: cmToInch(9.8),
@@ -413,9 +413,9 @@ addText(
   [
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_3_apriori.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
-    { text: "🧪 Thử nghiệm Thay đổi `min_support`:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Chạy vòng lặp kiểm thử với `min_sup` ∈ [0.10, 0.03].\n\n" },
-    { text: "• Hàm đo thời gian thực thi: `time.perf_counter()`\n\n" },
+    { text: "🧪 Thử nghiệm Thay đổi min_support:\n\n", options: { bold: true, fontSize: 12 } },
+    { text: "• Chạy vòng lặp kiểm thử với min_sup ∈ [0.10, 0.03].\n\n" },
+    { text: "• Hàm đo thời gian thực thi: time.perf_counter()\n\n" },
     { text: "🎯 Nhận xét: ", options: { bold: true } },
     { text: "Khi giảm min_support từ 10% xuống 3%, số Frequent Itemsets và thời gian tính toán bùng nổ cấp số nhân!" }
   ],

@@ -80,11 +80,13 @@ slide123Content.addText("ĐO MỨC SUY GIẢM CỦA LUẬT", { placeholder: "tit
 addText(
   slide123Content,
   [
-    { text: "📐 Công thức Đo suy giảm Confidence:\n\n", options: { bold: true, fontSize: 12.5 } },
-    { text: "• Mức suy giảm tuyệt đối:\n" },
+    { text: "📐 Công thức Đo suy giảm Confidence:\n\n", options: { bold: true, fontSize: 13 } },
+    { text: "• Mức sụt giảm tuyệt đối (Delta Conf):\n", options: { bold: true } },
     { text: "  Δconf = conf_train - conf_test\n\n" },
-    { text: "• Tỷ lệ duy trì Confidence (Retention Rate):\n" },
-    { text: "  Retention_conf = conf_test / conf_train" }
+    { text: "• Tỷ lệ duy trì Confidence (Retention Rate):\n", options: { bold: true } },
+    { text: "  Retention_conf = conf_test / conf_train\n\n" },
+    { text: "• Tỷ lệ duy trì Lift:\n", options: { bold: true } },
+    { text: "  Retention_lift = lift_test / lift_train" }
   ],
   {
     x: cmToInch(0.8),
@@ -96,7 +98,7 @@ addText(
     color: DUE_COLORS.darkText,
     fill: { color: DUE_COLORS.lightGreen },
     shape: "roundRect",
-    margin: 10,
+    margin: 12,
     rectRadius: 0.1,
     valign: "top",
   }

@@ -14,13 +14,13 @@ slide23Content.addText("THƯỚC ĐO 1 — SUPPORT (ĐỘ HỖ TRỢ)", { placeh
 addText(
   slide23Content,
   [
-    { text: "📏 Định nghĩa Support:\n\n", options: { bold: true, fontSize: 12.5 } },
+    { text: "📏 Định nghĩa Support (Độ hỗ trợ):\n\n", options: { bold: true, fontSize: 13 } },
     { text: "• Support đo tỷ lệ giao dịch chứa đồng thời cả vế trái (X) và vế phải (Y).\n\n" },
-    { text: "• Công thức:\n", options: { bold: true } },
-    { text: "  support(X → Y) = support(X ∪ Y) = count(X ∪ Y) / N\n\n" },
-    { text: "• Ký hiệu:\n", options: { bold: true } },
-    { text: "  - count(X ∪ Y): Số giao dịch chứa cả X và Y.\n" },
-    { text: "  - N: Tổng số giao dịch trong CSDL." }
+    { text: "• Công thức xác suất & đếm:\n", options: { bold: true } },
+    { text: "  Support(X → Y) = Support(X ∪ Y) = count(X ∪ Y) / N\n\n" },
+    { text: "• Ký hiệu chi tiết:\n", options: { bold: true } },
+    { text: "  - count(X ∪ Y): Số giao dịch chứa đồng thời mọi mục trong X ∪ Y.\n" },
+    { text: "  - N: Tổng số giao dịch trong cơ sở dữ liệu." }
   ],
   {
     x: cmToInch(0.8),
@@ -32,7 +32,7 @@ addText(
     color: DUE_COLORS.darkText,
     fill: { color: DUE_COLORS.lightGreen },
     shape: "roundRect",
-    margin: 10,
+    margin: 12,
     rectRadius: 0.1,
     valign: "top",
   }

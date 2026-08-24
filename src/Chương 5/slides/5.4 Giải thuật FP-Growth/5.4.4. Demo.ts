@@ -93,12 +93,12 @@ slide91Content.addText("CHUẨN BỊ DỮ LIỆU VÀ KHAI PHÁ", { placeholder: 
 addText(
   slide91Content,
   [
-    { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
+    { text: "📁 File thực thi: ", options: { bold: true, fontSize: 12.5 } },
     { text: "demo_5_4_fpgrowth.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
-    { text: "⚙️ Thao tác Khai phá chính:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Hàm khai phá: `mlxtend.frequent_patterns.fpgrowth()`\n\n" },
-    { text: "• Đo thời gian thực thi: `time.perf_counter()`\n\n" },
-    { text: "• So sánh trực tiếp với `apriori()` trên cùng ma trận giỏ hàng One-hot 0/1.\n\n" },
+    { text: "⚙️ Thao tác Khai phá chính:\n\n", options: { bold: true, fontSize: 11.5 } },
+    { text: "• Hàm khai phá: mlxtend.frequent_patterns.fpgrowth()\n" },
+    { text: "• Đo thời gian thực thi: time.perf_counter()\n" },
+    { text: "• So sánh trực tiếp với apriori() trên cùng ma trận One-hot 0/1.\n\n" },
     { text: "🎯 Mục tiêu: ", options: { bold: true } },
     { text: "Đánh giá tốc độ duyệt cây FP-tree so với quét Candidate." }
   ],
@@ -106,9 +106,9 @@ addText(
     x: cmToInch(0.8),
     y: cmToInch(2.0),
     w: cmToInch(11.5),
-    h: cmToInch(7.2),
-    fontSize: 11,
-    lineSpacing: 15,
+    h: cmToInch(7.4),
+    fontSize: 10.5,
+    lineSpacing: 12,
     color: DUE_COLORS.darkText,
     fill: { color: DUE_COLORS.lightBg },
     line: { color: DUE_COLORS.green, width: 2 },
@@ -123,10 +123,10 @@ addText(
   slide91Content,
   [
     { text: "📋 Cấu trúc cú pháp fpgrowth():\n\n", options: { bold: true, fontSize: 13 } },
-    { text: "• `fpgrowth(df, min_support, use_colnames=True)`\n\n" },
+    { text: "• fpgrowth(df, min_support, use_colnames=True)\n\n" },
     { text: "• Nhận đầu vào là Ma trận Boolean/One-hot tương tự như Apriori.\n\n" },
-    { text: "• Trả về DataFrame gồm 2 cột: `support` và `itemsets` (kiểu frozenset).\n\n" },
-    { text: "• Hoàn toàn tương thích với hàm `association_rules()` ở bước tiếp theo!" }
+    { text: "• Trả về DataFrame gồm 2 cột: support và itemsets (kiểu frozenset).\n\n" },
+    { text: "• Hoàn toàn tương thích với hàm association_rules() ở bước tiếp theo!" }
   ],
   {
     x: cmToInch(13.1),
@@ -228,11 +228,11 @@ addText(
     { text: "📁 File thực thi: ", options: { bold: true, fontSize: 13 } },
     { text: "demo_5_4_fpgrowth.py\n\n", options: { bold: true, color: DUE_COLORS.green } },
     { text: "⚙️ Sinh Luật từ Kết quả FP-Growth:\n\n", options: { bold: true, fontSize: 12 } },
-    { text: "• Hàm: `association_rules(freq_fpgrowth, metric='confidence', min_threshold=0.70)`\n\n" },
+    { text: "• Hàm: association_rules(freq_fpgrowth, metric='confidence', min_threshold=0.70)\n\n" },
     { text: "• Lọc nâng cao:\n" },
-    { text: "  `rules[(rules['confidence'] >= 0.70) & (rules['lift'] > 1)]`\n\n" },
+    { text: "  rules[(rules['confidence'] >= 0.70) & (rules['lift'] > 1)]\n\n" },
     { text: "• Sắp xếp theo thứ tự ưu tiên:\n" },
-    { text: "  `sort_values(by=['lift', 'confidence'], ascending=False)`" }
+    { text: "  sort_values(by=['lift', 'confidence'], ascending=False)" }
   ],
   {
     x: cmToInch(0.8),
