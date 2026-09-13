@@ -122,7 +122,7 @@ slide.addText("0236.xxx.xxx", { placeholder: "phone" });
 Để tránh tình trạng các khối chữ hoặc bảng biểu đè lên nhau trên không gian slide giới hạn (`25.4cm x 14.29cm`), dự án cung cấp hàm trợ giúp `addText` được khai báo trong `src/template/due-template.ts`:
 
 ### A. Cách hoạt động của hàm `addText`
-Hàm `addText` nhận vào `options` (chứa toạ độ ban đầu bằng đơn vị **inch**) và thực hiện tính toán độ dài chuỗi ký tự cùng số dòng thực tế dựa trên thuộc tính `w` (chiều rộng) và `fontSize` để trả về một đối tượng chứa thuộc tính `h` (chiều cao thự   tế sau khi giãn dòng).
+Hàm `addText` nhận vào `options` (chứa toạ độ ban đầu bằng đơn vị **inch**) và thực hiện tính toán độ dài chuỗi ký tự cùng số dòng thực tế dựa trên thuộc tính `w` (chiều rộng) và `fontSize` để trả về một đối tượng chứa thuộc tính `h` (chiều cao thực   tế sau khi giãn dòng).
 
 ### B. Quy tắc tính toán luồng văn bản dọc (Dynamic Vertical Flow)
 Để xếp các phần tử từ trên xuống dưới, không dùng toạ độ tĩnh cố định. Hãy lấy toạ độ `y` và chiều cao `h` của phần tử phía trước cộng thêm một khoảng đệm (gap):
